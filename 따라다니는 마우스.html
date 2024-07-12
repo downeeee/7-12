@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+        .mario{width: 50px; height: 50px; position: relative;}
+
+        .mario img{width: 100%;}
+    </style>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script lang="java">
+        $(function(){
+            $("html,body").mousemove(function(e){
+                console.log(e)
+
+
+
+                console.log("X :",e.pageX);
+                console.log("Y : ",e.pageY);
+
+                var x = e.pageX
+                var y = e.pageY
+                $(".mario").css({top:y , left : x})
+                
+            })//mousemove
+        })
+    </script>
+</head>
+<body>
+    <div class="mario">
+        <img src="img/pngegg.png" alt="mario">
+    </div>
+</body>
+</html>
